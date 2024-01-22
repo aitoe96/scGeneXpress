@@ -822,7 +822,7 @@ cells_exp<-function(data_matrix,min.cells.gexp){
 #' @param min.cells.gexp minimum of cells genes need to be expressed in
 #'
 #' @return sampled background
-Background_sampling<-function(counts_norm_mat,cell_clusterid_mat,ncells.sample=100,clusterids_vec="cell.type",min.cells.gexp=10){
+Background_sampling<-function(counts_norm_mat,cell_clusterid_mat,ncells.sample=10000,clusterids_vec="cell.type",min.cells.gexp=10){
 
   nlevels=length(clusterids_vec)
   cellid<-apply(cell_clusterid_mat,1,function(x){paste(x[clusterids_vec],collapse = ".")})
